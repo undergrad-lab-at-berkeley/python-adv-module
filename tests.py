@@ -20,11 +20,13 @@ class Tests(unittest.TestCase):
         lengths = [1, 3, 4]
         pi = np.pi
         thetas = [pi / 4, -pi / 3, pi / 6]
+        pos = positions(thetas, lengths)
         self.assertTrue(np.allclose(
-            positions(thetas, lengths),
+            pos,
             np.array([[ 0.70710678, -0.70710678],
                       [-1.89096943, -2.20710678],
                       [ 0.10903057, -5.6712084 ]])))
+        self.assertTrue(type(pos)==np.ndarray)
 
     def test_3(self, get_accel_1):
         pi = np.pi
