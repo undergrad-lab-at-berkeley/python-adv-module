@@ -51,7 +51,7 @@ class Tests(unittest.TestCase):
                     return False
             return True
 
-        for x in range(200):
+        for x in range(1, 200):
             self.assertEquals(is_prime(x), f(x))
 
 
