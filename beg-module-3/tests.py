@@ -45,16 +45,11 @@ class Tests(unittest.TestCase):
 
 
     def test_3(self, f):
-        def is_prime(x):    
-            if x<2:
-                return False
-            for i in range(2,int(x/2)+1):
-                if x % i == 0:
-                    return False
-            return True
+        xs = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
+        ps = [True,True,False,True,False,True,False,False,False,True,False,True,False,False,False,True,False,True,False,False,False,True,False,False,False,False,False,True]
 
-        for x in range(1, 200):
-            self.assertEquals(is_prime(x), f(x))
+        for i in range(len(xs)):
+            self.assertEquals(f(xs[i]), ps[i])
 
 
 ########## TESTS ##########
